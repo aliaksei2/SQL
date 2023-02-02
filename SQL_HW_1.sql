@@ -149,17 +149,17 @@ alter table employee_salary
 			(27, 8),
 			(35, 5),
 			(51, 9),
-			(59, 10);
-			(71, 13),
-			(72, 10),
-			(73, 6),
-			(74, 8),
-			(75, 4),
-			(76, 9),
-			(77, 11),
-			(78, 4),
-			(79, 7),
-			(80, 1);
+			(59, 10),
+			(11, 13),
+			(8, 10),
+			(12, 6),
+			(13, 8),
+			(14, 4),
+			(18, 9),
+			(21, 11),
+			(20, 4),
+			(23, 7),
+			(24, 1);
 			
 select * from employee_salary;
 
@@ -249,6 +249,7 @@ insert into roles_employee (employee_id, role_id)
 			(50, 19),
 			(49, 18);
 			
+drop table roles_employee;		
 select * from roles_employee;
 
 
