@@ -21,15 +21,10 @@ select employees.employee_name, salary.monthly_salary
 from employee_salary left join employees
 on employee_salary.employee_id = employees.id
 left join salary 
-on employee_salary.salary_id = salary.id;
-
-select *
-from employees left join employee_salary 
-on employees.id = employee_salary.employee_id 
-where employee_salary.salary_id is null;
+on employee_salary.salary_id = salary.id
+where employees.employee_name is null;
 
 -- 4. Вывести все зарплатные позиции  меньше 2000 но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
-
 select employees.employee_name, salary.monthly_salary 
 from employee_salary left join employees
 on employee_salary.employee_id = employees.id
