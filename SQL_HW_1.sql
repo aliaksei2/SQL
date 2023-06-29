@@ -103,19 +103,19 @@ insert into salary (monthly_salary)
   (2500);
 select * from salary;
 
+
 create table employee_salary (
 	id serial primary key,
 	employee_id int unique not null,
 	salary_id int not null
 );
 
-alter table employee_salary
+-- alter table employee_salary
 	add foreign key (employee_id)
 		references employees (id),
 	add foreign key (salary_id)
 		references salary (id);
 	
-	drop table employee_salary;
 
 	insert into employee_salary (employee_id, salary_id)
 	values  (1, 15),
@@ -148,20 +148,27 @@ alter table employee_salary
 			(22, 1),
 			(27, 8),
 			(35, 5),
-			(51, 9),
-			(59, 10),
-			(11, 13),
-			(8, 10),
-			(12, 6),
-			(13, 8),
-			(14, 4),
-			(18, 9),
-			(21, 11),
-			(20, 4),
-			(23, 7),
-			(24, 1);
+			(71, 9),
+			(72, 10),
+			(73, 13),
+			(74, 10),
+			(75, 6),
+			(76, 8),
+			(77, 4),
+			(78, 9),
+			(79, 11),
+			(80, 4);
 			
 select * from employee_salary;
+
+insert into employee_salary (employee_id, salary_id)
+values (24, 30),
+		(23, 38),
+		(20, 32),
+		(21, 33),
+		(18,35);
+
+
 
 create table roles (
 	id serial primary key,
@@ -248,8 +255,7 @@ insert into roles_employee (employee_id, role_id)
 			(48, 12),
 			(50, 19),
 			(49, 18);
-			
-drop table roles_employee;		
+					
 select * from roles_employee;
 
 
